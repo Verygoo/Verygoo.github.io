@@ -1,63 +1,19 @@
 ---
 layout: post
-title: iOS开发中的小问题记录
+title: 南卫版“超级演说家” 16名党员讲述“守护健康”感人故事 
 date: 2016-12-02 
-tag: iOS
+tag: 超级演说家
 ---
 
-### NSKeyedArchiver 自定义对象写文件
+为展示南山区卫生计生系统共产党人牢记宗旨、服务群众的本色和风采。6月14日下午，南山区委卫生工委“我是共产党员，...”演讲比赛决赛在西丽医院开展。
+<div align="center">
+      <img src="http://www.sznews.com/news/content/images/attachement/jpg/site293/20180614/IMG8c89a5be1f044789747113.jpg" height="300" width="500">
+  </div>
+  
+  深圳新闻网讯（记者 曹文丽 实习生 王传倡 通讯员 孙晓龙）为展示南山区卫生计生系统共产党人牢记宗旨、服务群众的本色和风采。6月14日下午，南山区委卫生工委“我是共产党员，...”演讲比赛决赛在西丽医院开展。活动现场，来自区卫计系统的16名党员们围绕“不忘初心、牢记使命”主题活动，结合个人或团队的经历和感受，讲述了共产党员在“守护健康、服务百姓”方面的生动实践。
 
-
-如果存储的对象类名有变动，则需要设置clasName, 方法为：“setClassName:forClass:”        
-使用 NSKeyedArchiver 进行数据持久化时, 系统会默认使用类名去建表，如果类名变了，那么使用新的类名肯定是从本地获取不到表的，代码执行崩溃。     
-所以需要在 NSKeyedArchiver 或者 NSKeyedUnarchiver 时使用 “setClassName:forClass:” 指定类名。 
-
-
-### 断点配置：【Generate Debug Symbols】     
-
-描述: 用来控制断点是否生效,关闭此功能，打包 `.ipa` 时，包体积会小很多。    
-配置路径:【project/TARGETS/Build Settings/Apple LLVM7.1 - Code Genneration/Generate Debug Symbols】    
-
-
-### 捕获全局异常：【All Exception】    
-
-描述: 用来捕捉整个项目在 Xcode 里执行时的异常。例如：try/catch 时 catch住的异常,【All Exception】可以直接定位到具体位置。     
-配置路径: 异常捕捉(commod+7)/Xcode左下角点击+/Add Exception Breakpoint/完成(回车键)  
-
-
-### UI相关
-
-1、设置状态栏颜色：
-
-```
-
-info.plist 添加 View controller-based status bar appearance - NO     
-代码里写 [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent]; 再次运行后状态栏就会变成白色。    
-
-```
-
-2、左滑返回手势失效了怎么办：   
-
-```    
-
-设置 navigationItem.leftBarButtonItem 之后，左滑返回手势就会失效。设置一下 UIGestureRecognizerDelegate 代理即可：
-
-self.navigationController.interactivePopGestureRecognizer.delegate = self;
-
-```
-
-3、让 TableView的 下拉 和 上拉 显示不一样的背景颜色：
-
-```
-
-给 TableView 上加一个 View，View 的 Frema：
-CGRectMake(0, -self.view.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height + 2)，
-给变View的背景颜色就可以了。
-
-```
-
-
-<br>
-转载请注明：[潘柏信的博客](http://baixin) » [iOS开发中的小问题记录](http://baixin.io/2016/12/iOS_Dev_Note/)  
-
-
+<div align="center">
+      <img src="http://www.sznews.com/news/content/images/attachement/jpg/site293/20180614/IMG8c89a5be1f044789747114.JPG" height="300" width="500">
+  </div>
+  
+  活动最后，南山人民医院黄柳凤获得一等奖；南山人民医院周娟、妇幼保健院于晔、妇幼保健院万喜获得二等奖；蛇口人民医院赵秀娟、慢性病防治院高俊、慢性病防治院李发荣、蛇口人民医院林金生、西丽人民医院罗鹏获得三等奖；民营机构郑秋红、疾病预防控制中心孟楠、疾病预防控制中心魏淑兰、卫生监督所李柱、西丽人民医院李炽峰、卫生监督所黄俊峰、民营机构周斌获得优秀奖。
